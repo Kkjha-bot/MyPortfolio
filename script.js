@@ -32,7 +32,24 @@ glow.style.top = e.clientY + "px";
 }
 const starsContainer = document.querySelector('.stars');
 
-let starCount = window.innerWidth <= 768 ? 20 : 80;
+let starCount;
+
+if(window.innerWidth <= 480){
+    // Small phones
+    starCount = 10;
+}
+else if(window.innerWidth <= 768){
+    // Large phones
+    starCount = 20;
+}
+else if(window.innerWidth <= 1200){
+    // Laptops
+    starCount = 80;
+}
+else{
+    // Large screens / desktops
+    starCount = 120;
+}
 
 for(let i = 0; i < starCount; i++){
 
@@ -52,3 +69,5 @@ for(let i = 0; i < starCount; i++){
 
     starsContainer.appendChild(star);
 }
+star.style.opacity = Math.random() * 0.8 + 0.2;
+star.style.animationDelay = Math.random() * 3 + 's';

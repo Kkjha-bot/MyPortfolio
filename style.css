@@ -582,3 +582,18 @@ opacity:0.6;
 }
 
 }
+@media(max-width:768px){
+
+.star{
+    animation-duration:4s !important;
+}
+
+.profile-ring::before{
+    animation-duration:18s !important;
+}
+
+.profile-ring::after{
+    animation-duration:22s !important;
+}
+
+}
