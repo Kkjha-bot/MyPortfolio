@@ -20,11 +20,13 @@ count = 0;
 }
 
 },2000);
+if(window.innerWidth > 768){
+
 const glow = document.querySelector(".cursor-glow");
 
 document.addEventListener("mousemove",(e)=>{
-
 glow.style.left = e.clientX + "px";
 glow.style.top = e.clientY + "px";
-
 });
+
+}
